@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eaebef;
+    font-family: 'Cinzel', serif;
+}
+/*clase padre */
+.nav{
+    width: 300px;
+}
+
+.nav__link{
+    color: #303440;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+}
+
+.nav__link--inside{
+    border-radius: 6px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* hover: efecto que realize cuando pasemos el mouse */
+.nav__link--inside:hover{
+    background: #f6f6f6;
+}
+/* clase hijo */
+.list{
+    width: 100%;
+    /* ocupe el 100% del height del navegador */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* centrar verticalmente a los elementos */
+    flex-direction: column;
+    border-radius: 0 16px 16 px 0;
+    background: #fff;
+}
+.list__item{
+    /* ocultar las viñetas de los li */
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    /* desaparezcan las listas internas */
+    overflow: hidden;
+}
+
+.list__item--click{
+    cursor: pointer;
+}
+
+.list__button{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+/* padre arrow hijo list arrow 
+al hacer clic rota el icono de la flecha hacia abajo
+*/
+.arrow .list__arrow{
+    transform: rotate(90deg);
+    transition: transforn .3s;
+}
+
+.list__arrow{
+    /* pasarlo a la derecha */
+    margin-left: auto;
+}
+.list__show{
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid #303440;
+    /* eliminar los circulos de los link */
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+}
+
+
+
+
+
